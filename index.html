@@ -1,151 +1,60 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Deepak Kumar | Entrepreneur & Web Developer</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }body {
-  font-family: 'Poppins', sans-serif;
-  background: #0f0f0f;
-  color: #f2f2f2;
-  line-height: 1.6;
-  scroll-behavior: smooth;
-}
-
-header {
-  text-align: center;
-  padding: 80px 20px 40px;
-  background: linear-gradient(to right, #ffb703, #fb8500);
-  color: #000;
-  position: relative;
-  z-index: 1;
-}
-
-header h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
-section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.section-title {
-  font-size: 2rem;
-  color: #ffb703;
-  margin-bottom: 20px;
-}
-
-.about p {
-  font-size: 1.1rem;
-  color: #ccc;
-}
-
-.project {
-  background: #222;
-  padding: 20px;
-  margin: 20px 0;
-  border-left: 4px solid #ffb703;
-  border-radius: 8px;
-}
-
-.project h3 {
-  color: #fff;
-  margin-bottom: 8px;
-}
-
-.project p {
-  color: #aaa;
-}
-
-.contact a {
-  display: inline-block;
-  color: #ffb703;
-  text-decoration: none;
-  margin: 5px 0;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #111;
-  color: #555;
-  font-size: 0.9rem;
-}
-
-/* Parallax background */
-.parallax {
-  background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1350&q=80');
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-  </style>
-</head><body>
-  <header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deepak Kumar - Logo & Poster Designer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Hero Section -->
+  <header class="hero">
     <h1>Deepak Kumar</h1>
-    <p>Entrepreneur • Web Developer • ₹100 Cr Dreamer</p>
-  </header>  <div class="parallax">My Digital Journey</div>  <section class="about">
-    <h2 class="section-title">About Me</h2>
-    <p>I’m Deepak, a focused entrepreneur and self-taught web developer. I build high-converting brands and digital platforms like Jeet365 (gaming-based coin system) and Wyldfox (footwear & accessory brand). My goal is to create ₹100 crore value through digital innovation and strategic growth.</p>
-  </section>  <section class="projects">
-    <h2 class="section-title">Featured Projects</h2><div class="project">
-  <h3>Jeet365 – Color & Number Prediction Platform</h3>
-  <p>A Firebase-powered prediction game with real-time coin updates, UPI payment system, and admin dashboard. Built for smart earning systems.</p>
-</div>
+    <p>Creative Logo & Social Media Poster Designer</p>
+    <a href="#contact" class="btn">Hire Me</a>
+  </header>
 
-<div class="project">
-  <h3>Wyldfox – Footwear & Accessories Brand</h3>
-  <p>Instagram-first fashion brand offering bold men’s accessories and unique footwear, powered by a custom-built eCommerce website.</p>
-</div>
+  <!-- About Section -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      Hi, I am Deepak – a passionate Logo and Social Media Designer.  
+      I help businesses and creators build strong brand identities with modern, eye-catching designs.  
+      I specialize in minimalist logos and social media content that stands out and attracts customers.
+    </p>
+  </section>
 
-  </section>  <div class="parallax">Let’s Work Together</div>  <section class="contact">
-    <h2 class="section-title">Let’s Connect</h2>
-    <p><a href="mailto:dp7814616@gmail.com">📧 dp7814616@gmail.com</a></p>
-    <p><a href="https://wa.me/917724941807">📱 WhatsApp: 7724941807</a></p>
-    <p><a href="https://wa.me/919630868075">📱 WhatsApp: 9630868075</a></p>
-    <p><a href="https://www.instagram.com/deeppuuu.3">📸 Instagram: @deeppuuu.3</a></p>
-  </section>  <footer>
-    <p>© 2025 Deepak Kumar. All Rights Reserved.</p>
-  </footer>  <script>
-    // Scroll animation
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
+  <!-- Services Section -->
+  <section class="services">
+    <h2>Services</h2>
+    <ul>
+      <li>✔ Minimalist & Modern Logo Design</li>
+      <li>✔ Social Media Posts & Business Posters</li>
+      <li>✔ Brand Kit (Logo + Social Media Pack)</li>
+    </ul>
+  </section>
 
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  </script></body></html>
+  <!-- Portfolio Section -->
+  <section class="portfolio">
+    <h2>My Work</h2>
+    <div class="gallery">
+      <img src="images/logo1.png" alt="Logo Design 1">
+      <img src="images/logo2.png" alt="Logo Design 2">
+      <img src="images/poster1.png" alt="Poster Design 1">
+      <img src="images/poster2.png" alt="Poster Design 2">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:dp7814616@gmail.com">dp7814616@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/917724941807" target="_blank">Chat on WhatsApp</a></p>
+    <p><a href="https://www.fiverr.com" target="_blank" class="btn">Hire Me on Fiverr</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Deepak Kumar | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
