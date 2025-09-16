@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Win365 — Admin Panel</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .admin-wrap{max-width:1100px;margin:20px auto;padding:18px;background:rgba(255,255,255,0.02);border-radius:12px}
+    .grid{display:grid;grid-template-columns:1fr 350px;gap:18px}
+    .list{max-height:60vh;overflow:auto;padding:8px}
+    .btn{padding:8px;border-radius:8px;border:0;background:var(--accent);color:#042033}
+    .danger{background:#d9534f;color:white}
+  </style>
+</head>
+<body>
+  <header class="topbar"><h1>Win365 — Admin</h1><nav><button onclick="logout()">Logout</button><button onclick="goHome()">Site</button></nav></header>
+  <main>
+    <div class="admin-wrap">
+      <div id="login-area">
+        <h3>Admin Login</h3>
+        <input id="admin-email" placeholder="Email" />
+        <input id="admin-pass" placeholder="Password" />
+        <button id="admin-login" class="btn">Login</button>
+        <div id="admin-msg" class="msg"></div>
+      </div>
+
+      <div id="panel" style="display:none">
+        <h3>Admin Panel</h3>
+        <div class="grid">
+          <div>
+            <h4>Users</h4>
+            <div class="list" id="users-list"></div>
+
+            <h4>Withdraw Requests</h4>
+            <div class="list" id="withdraw-list"></div>
+          </div>
+          <aside>
+            <h4>Selected User</h4>
+            <div id="selected-user">None</div>
+            <input id="admin-adjust-amount" placeholder="Adjust coins (+/-)" />
+            <button id="admin-adjust" class="btn">Update Coins</button>
+
+            <h4>Global Transactions</h4>
+            <div class="list" id="global-trans"></div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="admin.js"></script>
+</body>
+</html>
