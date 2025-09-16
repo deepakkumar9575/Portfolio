@@ -1,1 +1,40 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#1e90ff;
+  --muted:#9aa7bd;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  background: linear-gradient(180deg,#071021 0%,#071a2b 100%);color:#e6eef8;
+  min-height:100vh;display:flex;flex-direction:column;
+}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:transparent}
+.topbar h1{margin:0;font-size:22px;letter-spacing:1px}
+.topbar nav button{margin-left:8px;padding:8px 12px;border-radius:8px;border:0;background:var(--glass);color:var(--muted)}
+.page{display:none;padding:20px}
+.page.active{display:block}
+.hero{max-width:900px;margin:20px auto;text-align:center}
+.features{display:flex;gap:12px;justify-content:center;margin:12px 0}
+.features div{background:rgba(255,255,255,0.03);padding:10px 16px;border-radius:8px}
+.cta button{padding:10px 18px;border-radius:10px;border:0;background:var(--accent);color:#042033}
+.card{max-width:420px;margin:20px auto;background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+.form input{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:0;background:#071427;color:#e6eef8}
+.row{display:flex;gap:8px}
+.row button{flex:1;padding:10px;border-radius:8px;border:0;background:var(--accent);color:#042033}
+.msg{margin-top:8px;color:#ffb4b4}
 
+.layout{display:flex;gap:20px;align-items:flex-start;max-width:1100px;margin:20px auto}
+.panel{width:300px;background:var(--card);padding:16px;border-radius:12px}
+.panel input{width:100%;padding:8px;margin:8px 0;border-radius:8px;border:0;background:#071427;color:#e6eef8}
+.pay-list a{display:block;padding:8px;margin:6px 0;border-radius:8px;background:rgba(255,255,255,0.03);text-decoration:none;color:var(--muted)}
+.play-area{flex:1;background:rgba(255,255,255,0.02);padding:16px;border-radius:12px}
+.round-info{display:flex;gap:14px;align-items:center;margin-bottom:12px}
+.bet-card{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;margin-bottom:12px}
+.colors label{margin-right:10px}
+.bets-list, .history{background:rgba(255,255,255,0.01);padding:10px;border-radius:10px;margin-top:12px}
+.footer{text-align:center;padding:12px;color:var(--muted)}
+.small{font-size:12px;color:var(--muted);margin-top:8px}
+ul{list-style:none;padding:0;margin:0}
