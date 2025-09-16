@@ -1,1 +1,121 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Win365 — Simple Color Game (Demo)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Win365</h1>
+    <nav>
+      <button id="btn-home">Home</button>
+      <button id="btn-login">Login / Signup</button>
+      <button id="btn-admin">Admin</button>
+    </nav>
+  </header>
 
+  <main id="main">
+    <!-- HOME -->
+    <section id="home" class="page active">
+      <div class="hero">
+        <h2>Easy Color Prediction Game</h2>
+        <p>Login kar ke coins se khelo. Deposit karne ke liye payment apps par redirect. (Demo — coins only.)</p>
+        <div class="features">
+          <div>24×7 Customer Support</div>
+          <div>Instant Withdraw Request</div>
+          <div>Secure (Demo)</div>
+        </div>
+        <div class="cta">
+          <button id="play-now">Play Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUTH -->
+    <section id="auth" class="page">
+      <div class="card">
+        <h3 id="auth-title">Login</h3>
+        <div class="form">
+          <input id="email" type="email" placeholder="Email" />
+          <input id="password" type="password" placeholder="Password" />
+          <div class="row">
+            <button id="btn-auth">Login</button>
+            <button id="switch-auth">Switch to Signup</button>
+          </div>
+          <div id="auth-msg" class="msg"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GAME -->
+    <section id="game" class="page">
+      <div class="layout">
+        <aside class="panel">
+          <h3>Player</h3>
+          <div id="player-info">
+            <div id="player-email">Not logged in</div>
+            <div>Coins: <span id="player-coins">0</span></div>
+          </div>
+
+          <h4>Deposit</h4>
+          <p>Redirect to payment app to pay. After payment, admin will manually add coins.</p>
+          <div class="pay-list">
+            <!-- Replace UPI addresses below with actual IDs -->
+            <a id="upi-gpay" href="https://pay.google.com/" target="_blank">Pay with Google Pay</a>
+            <a id="upi-phonepe" href="https://www.phonepe.com/" target="_blank">Pay with PhonePe</a>
+            <a id="upi-paytm" href="https://paytm.com/" target="_blank">Pay with Paytm</a>
+          </div>
+
+          <h4>Withdraw</h4>
+          <input id="withdraw-upi" placeholder="Your UPI ID" />
+          <input id="withdraw-phone" placeholder="Contact number" />
+          <button id="btn-withdraw">Request Withdraw</button>
+          <div id="withdraw-msg" class="msg"></div>
+
+          <div class="small">
+            <p>Note: Deposit links redirect to payment apps. This project does not process payments — process them manually and update coins via admin.</p>
+          </div>
+        </aside>
+
+        <section class="play-area">
+          <div class="round-info">
+            <div>Round ends in: <span id="timer">30</span>s</div>
+            <div>Current Round: <span id="round-num">1</span></div>
+            <div>Last Result: <span id="last-result">-</span></div>
+          </div>
+
+          <div class="bet-card">
+            <h3>Place Bet</h3>
+            <div class="colors">
+              <label><input type="radio" name="color" value="Red" checked> Red</label>
+              <label><input type="radio" name="color" value="Green"> Green</label>
+              <label><input type="radio" name="color" value="Blue"> Blue</label>
+            </div>
+            <input id="bet-amount" type="number" placeholder="Amount (min 10)" />
+            <button id="btn-place-bet">Place Bet</button>
+            <div id="bet-msg" class="msg"></div>
+          </div>
+
+          <div class="bets-list">
+            <h4>Your Pending Bets</h4>
+            <ul id="pending-bets"></ul>
+          </div>
+
+          <div class="history">
+            <h4>Game History</h4>
+            <ul id="history-list"></ul>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Win365 — Demo project — Coins only. Do not use for real-money gambling.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
